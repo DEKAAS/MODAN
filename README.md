@@ -1,6 +1,6 @@
-# Modan Website
+# Modan Linktree
 
-A personal website for the music artist Modan, featuring a modern, minimalist design with glassmorphism effects and interactive elements.
+A personal linktree for the music artist Modan, featuring a modern, minimalist design with glassmorphism effects and interactive elements.
 
 ## Features
 
