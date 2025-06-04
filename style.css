@@ -238,6 +238,219 @@ h1, h2 {
     }
 }
 
+/* Timeline Section */
+.timeline {
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.2s;
+    padding: 0 20px;
+}
+
+.timeline h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--glow);
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--glow);
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-info {
+    width: 40%;
+    padding-right: 60px;
+    text-align: right;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-info {
+    order: 2;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 60px;
+}
+
+.timeline-item:nth-child(even) .timeline-artwork {
+    order: 1;
+}
+
+.timeline-info h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.timeline-info .date {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.timeline-info .type {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: var(--glow);
+    border: 1px solid var(--card-border);
+}
+
+.timeline-artwork {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.timeline-artwork::before {
+    content: attr(title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(10, 10, 10, 0.85);
+    color: var(--glow);
+    font-size: 0.9rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.timeline-artwork:hover::before {
+    transform: translateY(0);
+}
+
+.timeline-artwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.timeline-artwork:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(197, 176, 107, 0.2);
+}
+
+.timeline-artwork:hover img {
+    transform: scale(1.1);
+}
+
+.particle-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: radial-gradient(circle at center, 
+        rgba(197, 176, 107, 0.2) 0%,
+        transparent 70%);
+}
+
+.timeline-artwork:hover .particle-effect {
+    opacity: 1;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+/* Animation delays for timeline items */
+.timeline-item:nth-child(1) { animation-delay: 1.3s; }
+.timeline-item:nth-child(2) { animation-delay: 1.4s; }
+.timeline-item:nth-child(3) { animation-delay: 1.5s; }
+.timeline-item:nth-child(4) { animation-delay: 1.6s; }
+.timeline-item:nth-child(5) { animation-delay: 1.7s; }
+.timeline-item:nth-child(6) { animation-delay: 1.8s; }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 0 10px;
+    }
+
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .timeline-info {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-info {
+        order: 1;
+        padding-left: 50px;
+        text-align: left;
+    }
+
+    .timeline-artwork {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-artwork {
+        order: 2;
+        margin-left: 40px;
+    }
+}
+
 .gallery {
     margin-top: 60px;
     margin-bottom: 60px;
