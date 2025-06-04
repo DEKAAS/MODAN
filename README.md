@@ -10,20 +10,6 @@ A personal linktree for the music artist Modan, featuring a modern, minimalist d
 - Smooth animations and transitions
 - Mobile-friendly layout
 
-## Technologies Used
-
-- HTML5
-- CSS3 (with modern features like CSS Variables, Flexbox, Grid)
-- Vanilla JavaScript
-- Google Fonts (Space Grotesk, Inter)
-- Font Awesome Icons
-
-## Setup
-
-1. Clone the repository
-2. Open `index.html` in your browser
-3. No build process required - it's all static files!
-
 ## Credits
 
 - Artwork: Daniel Ekaas
