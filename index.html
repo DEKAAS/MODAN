@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="profile">
+                <h1>Modan</h1>
+                <p>Music Artist</p>
+            </div>
+        </header>
+
+        <section class="links">
+            <a href="https://open.spotify.com/artist/49jl9UHPWos5TQN4SCGJRa?si=dwQbDOtLQOG-GmemeluvpQ" class="link-card" target="_blank">
+                <i class="fab fa-spotify"></i>
+                <span>Modan på Spotify</span>
+            </a>
+            <a href="https://bandcamp.com" class="link-card" target="_blank">
+                <i class="fab fa-bandcamp"></i>
+                <span>Bandcamp</span>
+            </a>
+            <a href="https://youtube.com" class="link-card" target="_blank">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://soundcloud.com" class="link-card" target="_blank">
+                <i class="fab fa-soundcloud"></i>
+                <span>SoundCloud</span>
+            </a>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-grid" id="galleryContainer">
+                    <!-- Images will be loaded dynamically via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="credits">
+            <div class="credits-container">
+                <h2>Who makes all this beautiful artwork and music?</h2>
+                <div class="credits-content">
+
+                    <ul class="credits-list">
+                        <li>Artwork: Daniel Ekaas</li>
+                        <li>Composers: Morten Holterfelt & Daniel Ekaas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="secret-section">
+            <button class="secret-trigger">
+                <span>Wanna know a secret?</span>
+                <div class="arrow-down">↓</div>
+            </button>
+            <div class="secret-content">
+                <div class="secret-box">
+                    <p>MODAN = MOrten + DANiel</p>
+                    <p>That's it. That's the secret.</p>
+                    <p>(Very deep)</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Thanks for scrolling, I guess.</p>
+        </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
